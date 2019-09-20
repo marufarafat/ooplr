@@ -7,11 +7,11 @@ CREATE TABLE IF NOT EXISTS `users` (
   `username` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   `salt` varchar(32) NOT NULL,
-  `phone` varchar(20) NOT NULL,
-  `gender` varchar(1) NOT NULL,
-  `is_active` TINYINT(1) NOT NULL,
+  `phone` varchar(20) NULL,
+  `gender` varchar(1) NULL,
+  `is_active` TINYINT(1) NOT NULL DEFAULT 1,
   `group` INT(10) NOT NULL,
-  `profile_picture` varchar(200) NOT NULL,
+  `profile_picture` varchar(200) NULL,
   `joined` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1;
